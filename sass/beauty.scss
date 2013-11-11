@@ -1,0 +1,79 @@
+@import "variables";
+@import "functions";
+
+body {
+	background: black;
+}
+
+.system {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.home {
+	background: $gold;
+	border: 3px solid black;
+	@include circle($medium);
+	@include centered($medium);
+	@include transition(0.2s);
+	&:hover {
+		cursor: pointer;
+		background: adjust-lightness($gold, 10);
+		@include grow($medium-hover);
+	}
+}
+
+.local {
+	background: $gold;
+	border: 3px solid black;
+	@include circle($small);
+	@include centered($small);
+		top: 40%;
+	@include transition(0.2s);
+	&:hover {
+		cursor: pointer;
+		background: adjust-lightness($gold, 10);
+		@include grow($small-hover);
+	}
+}
+
+.local-two {
+	background: $cyan;
+	border: 3px solid black;
+	@include circle($medium);
+	@include centered($medium);
+		left: 58%;
+	@include transition(0.2s);
+	&:hover {
+		cursor: pointer;
+		background: adjust-lightness($cyan, 10);
+		@include grow($medium-hover);
+	}
+}
+
+.vertical-connection {
+	width: 1px;
+	height: 10%;
+	background: white;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	z-index: -3;
+}
+
+.horizontal-connection {
+	width: 8%;
+	height: 1px;
+	background: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -3;
+}
+
+.gridCell {
+	border: 1px solid #a6a6a6;
+}

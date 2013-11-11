@@ -1,0 +1,31 @@
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+	border-radius: 100%;
+}
+
+@mixin centered($size) {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -(floor($size / 2));
+	margin-left: -(floor($size / 2));
+}
+
+// Animations
+
+@mixin grow($newSize) {
+	width: $newSize;
+	height: $newSize;
+	margin-top: -(floor($newSize / 2));
+	margin-left: -(floor($newSize / 2));
+}
+
+
+// Proprietary Bundles
+@mixin transition($amount) {
+	transition: $amount;
+	-webkit-transition: $amount;
+	-moz-transition: $amount;
+	-o-transition: $amount;
+}

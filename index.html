@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nomad</title>
+	<link rel="stylesheet" type="text/css" href="css/compass-reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/beauty.css" />
+	<script type="text/javascript" src="js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/mootools/moocore.js"></script>
+	<script type="text/javascript" src="js/classes/grid.js"></script>
+</head>
+<body ng-app="Nomad">
+
+	<div class="system" star-system>
+		<div class="gridCell" ng-repeat="cell in cells" style="width: {{cellSize}}" cell></div>
+	</div>
+	<!-- <div class="home"></div> -->
+
+</body>
+</html>
